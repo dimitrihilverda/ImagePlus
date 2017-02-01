@@ -141,8 +141,6 @@
         
             <li><a href="#show-credits-field">Show Credits Field</a></li>
         
-            <li><a href="#allow-empty">Allow Empty</a></li>
-        
             <li><a href="#contextsystem-settings">Context/System Settings</a></li>
         
     
@@ -160,26 +158,26 @@
             <li><a href="#example">Example</a></li>
         
     
-        <li class="main "><a href="#system-settings">System Settings</a></li>
-        
-    
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
 <h2 id="input-options">Input Options</h2>
-<p>In <em>Image+</em> you could control the final size and aspect ratio of selected images. There are several extended input 
-options available for an <em>Image+</em> TV:</p>
+<p>In <em>Image+</em> you could control the final size and aspect ratio of selected
+images. There are several extended input options available for an <em>Image+</em> TV:</p>
 <h4 id="target-heightwidth">Target Height/Width</h4>
-<p>Images can be constrained to a minimal height and/or width with <strong>Target height</strong> and <strong>Target width</strong>. If both values 
-are set, the target aspect ratio of the output image is calculated with this values. Both fields have to be filled with 
-an integer value.</p>
+<p>Images can be constrained to a minimal height and/or width with <strong>Target
+height</strong> and <strong>Target width</strong>. If both values are set, the target aspect ratio
+of the output image is calculated with this values. Both fields have to be
+filled with an integer value.</p>
 <h4 id="target-aspect-ratio">Target Aspect Ratio</h4>
-<p>The aspect ratio for the output image could be restricted with <strong>Target Aspect Ratio</strong>. If target height and target 
-width are set, this value is ignored and the calculated aspect ratio of target height and target width is used. 
-The field has to be filled with a float value.</p>
-<p>If you set only one value of <strong>Target Height</strong> or <strong>Target Width</strong> and leave empty <strong>Target Aspect Ratio</strong>, the size of 
-the crop is not restricted to any aspect ratio.</p>
+<p>The aspect ratio for the output image could be restricted with <strong>Target Aspect
+Ratio</strong>. If target height and target width are set, this value is ignored and
+the calculated aspect ratio of target height and target width is used. The field
+has to be filled with a float value.</p>
+<p>If you set only one value of <strong>Target Height</strong> or <strong>Target Width</strong> and leave
+empty <strong>Target Aspect Ratio</strong>, the size of the crop is not restricted to any
+aspect ratio.</p>
 <div class="panel panel-default">
     <div class="panel-heading">
         How to calculate float value
@@ -190,47 +188,58 @@ the crop is not restricted to any aspect ratio.</p>
 </div>
 
 <h4 id="show-alt-tag-field">Show Alt Tag Field</h4>
-<p><em>Image+</em> TVs can also contain an <strong>Alt Tag Field</strong>, which is an additional text input, that is stored with each image. 
-It could be output alongside the image i.e. as an alt-tag or title-tag.</p>
-<p>In order to output the alt text in a <em>Image+</em> TV placeholder, you will need to select an chunk in the <strong>Output 
-Options</strong>. You could also use the ImagePlus snippet and specify a template chunk in the snippet call options.
-The alt text is filled in the placeholder <code>[[+alt]]</code> in that chunk.</p>
+<p><em>Image+</em> TVs can also contain an <strong>Alt Tag Field</strong>, which is an additional text
+<em>input, that is stored with each image. It could be output alongside the image
+</em>i.e. as an alt-tag or title-tag.</p>
+<p>In order to output the alt text in a <em>Image+</em> TV placeholder, you will need to
+select an chunk in the <strong>Output Options</strong>. You could also use the ImagePlus
+snippet and specify a template chunk in the snippet call options. The alt text
+is filled in the placeholder <code>[[+alt]]</code> in that chunk.</p>
 <h4 id="show-caption-field">Show Caption Field</h4>
-<p><em>Image+</em> TVs can also contain an <strong>Caption Field</strong>, which is an additional text input, that is stored with each image. 
-It could be output beneath the image i.e. in an additional caption div.</p>
-<p>In order to output the caption in a <em>Image+</em> TV placeholder, you will need to select an chunk in the <strong>Output 
-Options</strong>. You could also use the ImagePlus snippet and specify a template chunk in the snippet call options. 
-The caption is filled in the placeholder <code>[[+caption]]</code> in that chunk.</p>
+<p><em>Image+</em> TVs can also contain an <strong>Caption Field</strong>, which is an additional text
+<em>input, that is stored with each image. It could be output beneath the image
+</em>i.e. in an additional caption div.</p>
+<p>In order to output the caption in a <em>Image+</em> TV placeholder, you will need to
+select an chunk in the <strong>Output Options</strong>. You could also use the ImagePlus
+snippet and specify a template chunk in the snippet call options. The caption is
+filled in the placeholder <code>[[+caption]]</code> in that chunk.</p>
 <h4 id="show-credits-field">Show Credits Field</h4>
-<p><em>Image+</em> TVs can also contain an <strong>Credits Field</strong>, which is an additional text input, that is stored with each image. 
-It could be output beneath the image i.e. in an additional credits div.</p>
-<p>In order to output the credits in a <em>Image+</em> TV placeholder, you will need to select an chunk in the <strong>Output 
-Options</strong>. You could also use the ImagePlus snippet and specify a template chunk in the snippet call options.
-The credits are filled in the placeholder <code>[[+credits]]</code> in that chunk.</p>
-<h4 id="allow-empty">Allow Empty</h4>
-<p>If <strong>Allow Empty</strong> is set to <strong>No</strong>, you will not be able to save a resource until you have selected an image and 
-cropped it.</p>
+<p><em>Image+</em> TVs can also contain an <strong>Credits Field</strong>, which is an additional text
+<em>input, that is stored with each image. It could be output beneath the image
+</em>i.e. in an additional credits div.</p>
+<p>In order to output the credits in a <em>Image+</em> TV placeholder, you will need to
+select an chunk in the <strong>Output Options</strong>. You could also use the ImagePlus
+snippet and specify a template chunk in the snippet call options. The credits
+are filled in the placeholder <code>[[+credits]]</code> in that chunk.</p>
 <h3 id="contextsystem-settings">Context/System Settings</h3>
-<p>Each <em>Image+</em> TV <strong>Input Option</strong> could be superceded by a context setting or a system setting. And context/system
-settings for a single TV could be defined, too. There are predefined system settings in the <code>imageplus</code> namespace. The
-global context/system settings have the prefix <code>imageplus.</code> and the single TV context/system settings have the prefix
-<code>imageplus.{tvname}.</code>. <code>{tvname}</code> has to be replaced by the name of the template variable.</p>
+<p>Each <em>Image+</em> TV <strong>Input Option</strong> could be superceded by a context setting or a
+system setting. And context/system settings for a single TV could be defined,
+too. </p>
+<p>There are predefined system settings in the <code>imageplus</code> namespace, that are
+empty or equal zero. If you enable one or fill it with a value, this setting
+will supercede the Input Options of all Image+ TVs. Context settings have to be
+created before usage.</p>
+<p>The global context/system settings have the prefix <code>imageplus.</code> and the single
+TV context/system settings have the prefix <code>imageplus.{tvname}.</code>. <code>{tvname}</code> has
+to be replaced by the name of the template variable.</p>
 <p>The order for those settings is <sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup></p>
 <ul>
-<li>TV name based context setting </li>
-<li>TV name based system setting </li>
+<li>TV name based context setting</li>
+<li>TV name based system setting</li>
 <li>context setting</li>
 <li>system setting</li>
 </ul>
 <h2 id="output-options">Output Options</h2>
 <p>There are several extended output options available for of an <em>Image+</em> TV:</p>
 <h4 id="additional-phpthumb-parameters">Additional phpThumb Parameters</h4>
-<p>As default an <em>Image+</em> TV returns an relative URL to an cropped (and maybe constrained) image that is scaled by 
-phpThumb. With this output option, you could assign several additional phpThumb parameters, that are used to generate 
+<p>As default an <em>Image+</em> TV returns an relative URL to an cropped (and maybe
+constrained) image that is scaled by phpThumb. With this output option, you
+could assign several additional phpThumb parameters, that are used to generate
 the thumbnail image.</p>
 <h4 id="output-chunk">Output Chunk</h4>
-<p>If you select an <strong>Output Chunk</strong> the TV output is rendered with that chunk. Select the chunk name from the dropdown. 
-Several placeholders are possible in that chunk to customize the output:</p>
+<p>If you select an <strong>Output Chunk</strong> the TV output is rendered with that chunk.
+Select the chunk name from the dropdown. Several placeholders are possible in
+that chunk to customize the output:</p>
 <table>
 <thead>
 <tr>
@@ -295,12 +304,13 @@ Several placeholders are possible in that chunk to customize the output:</p>
 </table>
 <p>All these placeholders could be used in the Snippet too.</p>
 <h4 id="generate-thumb-url">Generate Thumb URL</h4>
-<p>If you create the thumbnail in output chunk i.e. by a pthumb output filter, you could disable the generation of the 
-internal thumb URL. </p>
+<p>If you create the thumbnail in output chunk i.e. by a pthumb output filter, you
+could disable the generation of the internal thumb URL.</p>
 <h2 id="snippet">Snippet</h2>
-<p>The Snippet gives you a second option to render the TV value. With the template variable output, you are 
-restricted to one output chunk per template variable, with the snippet you could be more flexiple use different output chunks. The following 
-properties could be set in the snippet call:</p>
+<p>The Snippet gives you a second option to render the TV value. With the template
+variable output, you are restricted to one output chunk per template variable,
+with the snippet you could be more flexiple use different output chunks. The
+following properties could be set in the snippet call:</p>
 <table>
 <thead>
 <tr>
@@ -348,34 +358,18 @@ properties could be set in the snippet call:</p>
 </tbody>
 </table>
 <h4 id="example">Example</h4>
-<pre><code>[[ImagePlus? 
-&amp;tvname=`imageplus` 
+<pre><code>[[ImagePlus?
+&amp;tvname=`imageplus`
 &amp;docid=`1`
-&amp;options=`w=100` 
-&amp;type=`tpl` 
+&amp;options=`w=100`
+&amp;type=`tpl`
 &amp;tpl=`ImagePlus.demo`
 ]]
 </code></pre>
 
-<p>Will output the content of the template variable with the name <em>imageplus</em> of resource <em>1</em> and the extended phpThumb option <em>&amp;w=100</em> (width: 100px) in the parsed <em>ImagePlus.demo</em> chunk.</p>
-<h2 id="system-settings">System Settings</h2>
-<p>ImagePlus uses the following system settings in the namespace <code>imageplus</code>:</p>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>imageplus.debug</td>
-<td>Log debug informations in MODX error log.</td>
-<td>No</td>
-</tr>
-</tbody>
-</table>
+<p>Will output the content of the template variable with the name <em>imageplus</em> of resource
+<em>1</em> and the extended phpThumb option <em>&amp;w=100</em> (width: 100px) in the parsed
+<em>ImagePlus.demo</em> chunk.</p>
 <!-- Piwik -->
 
 <script type="text/javascript">
@@ -405,7 +399,7 @@ properties could be set in the snippet call:</p>
 <p>Outputs <em>image</em> if the Image+ TV contains an image, otherwise <em>noimage</em>.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
-<p>Outputs the parsed template set by <strong>tpl</strong> property for retreived Image+ TV value (with additional options set by the <strong>options</strong> property) &#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p>Outputs the parsed template set by <strong>tpl</strong> property for retreived Image+ TV value (with additional options set by the <strong>options</strong> property)&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:4">
 <p>Outputs the thumbnail URL for retreived Image+ TV value (with additional options set by the <strong>options</strong> property)&#160;<a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
