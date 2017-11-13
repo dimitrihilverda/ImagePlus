@@ -568,7 +568,11 @@ empty <strong>Target Aspect Ratio</strong>, the size of the crop is not restrict
 aspect ratio.</p>
 <div class="admonition note">
 <p class="admonition-title">How to calculate the aspect ratio</p>
-<p>The aspect ratio contains a float value: this value is easily acquired by dividing any width of a desired aspect ratio by its corresponding height. So say you want to all your crops to have the same aspect ratio as a 1600x1000 image, simply divide 1600 by 1000, resulting in 1.6. This is your aspect ratio value.</p>
+<p>The aspect ratio contains a float value: this value is easily acquired by
+dividing any width of a desired aspect ratio by its corresponding height. So
+say you want to all your crops to have the same aspect ratio as a <code>1600x1000</code>
+image, simply divide <code>1600</code> by <code>1000</code>, resulting in <code>1.6</code>. This is your aspect
+ratio value.</p>
 </div>
 <h4 id="show-alt-tag-field">Show Alt Tag Field<a class="headerlink" href="#show-alt-tag-field" title="Permanent link">&para;</a></h4>
 <p><em>Image+</em> TVs can also contain an <strong>Alt Tag Field</strong>, which is an additional text
@@ -692,6 +696,13 @@ that chunk to customize the output:</p>
 <h4 id="generate-thumb-url">Generate Thumb URL<a class="headerlink" href="#generate-thumb-url" title="Permanent link">&para;</a></h4>
 <p>If you create the thumbnail in output chunk i.e. by a pthumb output filter, you
 could disable the generation of the internal thumb URL.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>You have to activate this option, when you don't specify an output chunk in
+the output options or when you use the <code>[[+url]]</code> placeholder in the specified
+output chunk. Otherwise the image is not cropped/resized and the original
+image path is returned.</p>
+</div>
 <h2 id="snippet">Snippet<a class="headerlink" href="#snippet" title="Permanent link">&para;</a></h2>
 <p>The Snippet gives you a second option to render the TV value. With the template
 variable output, you are restricted to one output chunk per template variable,
@@ -753,9 +764,9 @@ following properties could be set in the snippet call:</p>
 ]]
 </code></pre>
 
-<p>Will output the content of the template variable with the name <em>imageplus</em> of resource
-<em>1</em> and the extended phpThumb option <em>&amp;w=100</em> (width: 100px) in the parsed
-<em>ImagePlus.demo</em> chunk.</p>
+<p>This snippet call outputs the content of the template variable with the name
+<code>imageplus</code> of resource <code>1</code> and the extended phpThumb option <code>&amp;w=100</code> (width:
+100px) in the parsed <code>ImagePlus.demo</code> chunk.</p>
 <div class="footnote">
 <hr />
 <ol>
